@@ -9,7 +9,8 @@
 		"start": "nuxt start",
 		"export": "nuxt export",
 		"serve": "nuxt serve",
-		"test": "jest"
+		"test": "jest",
+		"generate": "nuxt build && nuxt export"
 	},
 	"dependencies": {
 		"nuxt": "^2.13.0",
