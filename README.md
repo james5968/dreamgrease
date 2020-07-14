@@ -1,5 +1,5 @@
 # DreamGrease
-Basic framework for Dream Grease band website\
+Basic framework for Dream Grease band website.
 
 ## Build Setup
 

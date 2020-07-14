@@ -6,7 +6,8 @@ export default {
 	mode: 'spa',
 	/*
   ** Nuxt target
-  ** See https://nuxtjs.org/api/configuration-target
+  ** See https://nuxtjs.org/apinpm run deploy
+  /configuration-target
   */
 	target: 'static',
 	/*
