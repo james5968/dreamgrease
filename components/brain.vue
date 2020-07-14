@@ -5,14 +5,21 @@
         v-tilt="{'full-page-listening':true, glare:true, reverse:false}"
         class="brain-img"
         src="@/assets/brain.png"
-        width="600"
+        :width="width"
       />
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  computed: {
+    width: () => {
+      let width = window.innerWidth > 0 ? window.innerWidth : screen.width;
+      return width * 0.6;
+    }
+  }
+};
 </script>
 
 <style>

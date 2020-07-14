@@ -5,14 +5,14 @@ export default {
   */
 	mode: 'spa',
 	router: {
-		base: '/dreamgrease/'
+		base: '/'
 	},
 	/*
   ** Nuxt target
   ** See https://nuxtjs.org/apinpm run deploy
   /configuration-target
   */
-	target: 'static',
+
 	/*
   ** Headers of the page
   ** See https://nuxtjs.org/api/configuration-head
@@ -56,5 +56,24 @@ export default {
   ** Build configuration
   ** See https://nuxtjs.org/api/configuration-build/
   */
-	build: {}
+	build: {
+		publicPath: 'public/',
+		/*
+        ** You can extend webpack config here
+        */
+		extend(config, ctx) {
+			// Run ESLint on save
+			if (ctx.isDev && ctx.isClient) {
+				config.module.rules.push({
+					enforce: 'pre',
+					test: /\.(js|vue)$/,
+					loader: 'eslint-loader',
+					exclude: /(node_modules)/,
+					options: {
+						fix: true
+					}
+				});
+			}
+		}
+	}
 };

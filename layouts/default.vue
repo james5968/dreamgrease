@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h1 class="title">DREAM GREASE</h1>
     <Nuxt />
     <VHSOverlay />
   </div>
@@ -25,7 +26,7 @@ export default {
   display: block;
   font-weight: 300;
 
-  color: #35495e;
+  color: #ffffff;
   letter-spacing: 1px;
 }
 html {
